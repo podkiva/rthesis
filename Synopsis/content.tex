@@ -2,6 +2,8 @@
 
 \newcommand{\actuality}{\underline{\textbf{\actualityTXT}}}
 \newcommand{\progress}{\underline{\textbf{\progressTXT}}}
+\newcommand{\object}{\underline{{\textbf\objectTXT}}}
+\newcommand{\predmet}{\underline{{\textbf\predmetTXT}}}
 \newcommand{\aim}{\underline{{\textbf\aimTXT}}}
 \newcommand{\tasks}{\underline{\textbf{\tasksTXT}}}
 \newcommand{\novelty}{\underline{\textbf{\noveltyTXT}}}
@@ -52,21 +54,10 @@
 
 \underline{\textbf{Третья глава}} посвящена исследованию
 
-Можно сослаться на свои работы в автореферате. Для этого в файле
-\verb!Synopsis/setup.tex! необходимо присвоить положительное значение
-счётчику \verb!\setcounter{usefootcite}{1}!. В таком случае ссылки на
-работы других авторов будут подстрочными.
-Изложенные в третьей главе результаты опубликованы в~\cite{vakbib1, vakbib2}.
-Использование подстрочных ссылок внутри таблиц может вызывать проблемы.
-
 В \underline{\textbf{четвертой главе}} приведено описание
 
 В \underline{\textbf{заключении}} приведены основные результаты работы, которые заключаются в следующем:
 \input{common/concl}
-
-При использовании пакета \verb!biblatex! список публикаций автора по теме
-диссертации формируется в разделе <<\publications>>\ файла
-\verb!common/characteristic.tex!  при помощи команды \verb!\nocite!
 
 \ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=false}}{} % не рекомендуется применять пакет микротипографики к автоматически генерируемому списку литературы
 \urlstyle{rm}                               % ссылки URL обычным шрифтом
@@ -86,18 +77,17 @@
   \nocite{vakbib2}%
   %
   %% authorwos
-  \nocite{wosbib1}%
   %
   %% authorscopus
-  \nocite{scbib1}%
+  \nocite{Zhang2017}%
+  \nocite{Podkurkov2017}%
   %
   %% authorconf
-  \nocite{confbib1}%
-  \nocite{confbib2}%
-  %
+  \nocite{Zhang2016}%
+  \nocite{ptitt18}%
+  \nocite{Podkurkov2018}%
   %% authorother
-  \nocite{bib1}%
-  \nocite{bib2}%
+  \nocite{otherbib1}%
 
   \ifnumgreater{\value{usefootcite}}{0}{
     \begin{refcontext}[labelprefix={}]

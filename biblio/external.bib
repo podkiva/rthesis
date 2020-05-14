@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 % ГОСТ Р 7.0.11-2011, Приложение Б, Книги
 @BOOK{Sychev,
   author = {Сычёв, М. С.},
@@ -456,16 +457,17 @@
 }
 
 % Real with  4 authors
-@article{doi:10.1080/01932691.2010.513279,
-  author = {Young-Sang Cho and Young Kuk Kim and Kook Chae Chung and Chul Jin Choi },
-  title = {Deformation of Colloidal Crystals for Photonic Band Gap Tuning},
-  journal = {Journal of Dispersion Science and Technology},
-  volume = {32},
-  number = {10},
-  pages = {1408-1415},
-  year = {2011},
-  doi = {10.1080/01932691.2010.513279},
-  language = {english}
+
+@Article{doi:10.1080/01932691.2010.513279,
+  author   = {Young-Sang Cho and Young Kuk Kim and Kook Chae Chung and Chul Jin Choi},
+  title    = {Deformation of Colloidal Crystals for Photonic Band Gap Tuning},
+  doi      = {10.1080/01932691.2010.513279},
+  language = {english},
+  number   = {10},
+  pages    = {1408-1415},
+  volume   = {32},
+  journal  = {Journal of Dispersion Science and Technology},
+  year     = {2011},
 }
 
 % doi with (), author with umlaut or other unicode or specific symbols, 9 authors
@@ -515,22 +517,19 @@
 % inputenc don't know β sign %aluminosilicate-β-quartz
 % Знаки типа β, которые не знает таблица кодировки, с которой работает компилятор нужно заменять на latex команды
 % doi должен быть без http://dx.doi.org/
-@article{Shoji199895,
-title = "Low-temperature anodic bonding using lithium aluminosilicate-\(\beta\)-quartz glass ceramic",
-journal = "Sensors and Actuators A: Physical",
-volume = "64",
-number = "1",
-pages = "95 - 100",
-year = "1998",
-note = "Tenth {IEEE} International Workshop on Micro Electro Mechanical Systems ",
-issn = "0924-4247",
-doi = "10.1016/S0924-4247(97)01659-2",
-author = {Shuichi Shoji and Hiroto Kikuchi and Hirotaka Torigoe},
-keywords = "Anodic bonding",
-keywords = "Low-temperature bonding",
-keywords = "Micro assembly",
-keywords = "Micro package",
-keywords = "Glass ceramic",
+
+@Article{Shoji199895,
+  author   = {Shuichi Shoji and Hiroto Kikuchi and Hirotaka Torigoe},
+  title    = {Low-temperature anodic bonding using lithium aluminosilicate-\(\beta\)-quartz glass ceramic},
+  doi      = {10.1016/S0924-4247(97)01659-2},
+  issn     = {0924-4247},
+  note     = {Tenth {IEEE} International Workshop on Micro Electro Mechanical Systems},
+  number   = {1},
+  pages    = {95 - 100},
+  volume   = {64},
+  journal  = {Sensors and Actuators A: Physical},
+  keywords = {Anodic bonding, Low-temperature bonding, Micro assembly, Micro package, Glass ceramic},
+  year     = {1998},
 }
 
 
@@ -560,15 +559,6 @@ keywords = "Glass ceramic",
   shortbooktitle = {Proc. of ICASSP},
   year =         2007,
   url =          {http://cs.jhu.edu/~jason/papers/\#icassp07}
-}
-
-% Попытка записать патент имеющимися средствами
-@Book{iofis_patent1960,
-  title                    = {Способ пайки керамики с~керамикой и~стекла с~металлом : а.\,с.~126728 СССР},
-  author                   = {Иофис, Н. А.},
-  year                     = {1960},
-  numpages                 = {Бюл. № 5.~1},
-  language                 = {russian}
 }
 
 % Попытка записать патент имеющимися средствами
@@ -635,3 +625,281 @@ keywords = "Glass ceramic",
   pagetotal =    {5 с.~: ил.},
   language =     {russian},
 }
+
+@InProceedings{Richter2005,
+  author       = {Richter, Andreas},
+  title        = {Estimation of radio channel parameters: Models and algorithms},
+  year         = {2005},
+  organization = {ISLE},
+}
+
+@InProceedings{Raimondi2016,
+  author       = {Raimondi, Francesca and Comon, Pierre and Michel, Olivier},
+  booktitle    = {2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  title        = {Wideband multilinear array processing through tensor decomposition},
+  organization = {IEEE},
+  pages        = {2951--2955},
+  year         = {2016},
+}
+
+@Article{DoHong2004,
+  author       = {Tuan-Do-Hong and P. Russer},
+  date         = {March 2004},
+  journaltitle = {IEEE Microwave Magazine},
+  title        = {Signal processing for wideband smart antenna array applications},
+  doi          = {10.1109/MMW.2004.1284944},
+  issn         = {1557-9581},
+  issue        = {1},
+  pages        = {57--67},
+  volume       = {5},
+  abstract     = {In this article, we summarized the topics of array processing for wideband signals in smart antenna-based applications. For wideband beamforming, the TDF1B and FDFIB methods can provide the frequency-invariant beam-pattern over an arbitrarily wide bandwidth. The FDFIB method is applicable with arbitrary antenna arrays and suitable for switched beams and direction-finding approaches. The frequency-invariant beam-pattern can be designed with prescribed narrow main beam width and low SLL over a wide bandwidth by using two FDFIBs in a spatial interpolation process. For wideband DOA estimation, two main approaches based on the CSS method and beam-space processing has been introduced. The latest approach can provide lower resolution threshold, lower RMSE of estimate, and lower computational complexity. Finally, practical considerations in implementation of an antenna array regarding to array errors and mutual coupling have been considered. In the presence of array errors and mutual coupling, the performance of wideband DOA estimation is strongly degraded.},
+  file         = {:https\://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1284944:PDF},
+  keywords     = {Broadband antennas, Array signal processing, Antenna arrays, Wideband, Frequency, Bandwidth, Direction of arrival estimation, Mutual coupling, Signal processing, Directive antennas},
+  publisher    = {IEEE},
+  year         = {2004},
+}
+
+@Article{Kozick2000,
+  author       = {R.J. Kozick and B.M. Sadler},
+  date         = {Dec. 2000},
+  journaltitle = {IEEE Transactions on Signal Processing},
+  title        = {Maximum-likelihood array processing in non-Gaussian noise with Gaussian mixtures},
+  doi          = {10.1109/78.887045},
+  issn         = {1941-0476},
+  issue        = {12},
+  pages        = {3520--3535},
+  volume       = {48},
+  abstract     = {Many approaches have been studied for the array processing problem when the additive noise is modeled with a Gaussian distribution, but these schemes typically perform poorly when the noise is non-Gaussian and/or impulsive. This paper is concerned with maximum likelihood array processing in non-Gaussian noise. We present the Cramer-Rao bound on the variance of angle-of-arrival estimates for arbitrary additive, independent, identically distributed (iid), symmetric, non-Gaussian noise. Then, we focus on non-Gaussian noise modeling with a finite Gaussian mixture distribution, which is capable of representing a broad class of non-Gaussian distributions that include heavy tailed, impulsive cases arising in wireless communications and other applications. Based on the Gaussian mixture model, we develop an expectation-maximization (EM) algorithm for estimating the source locations, the signal waveforms, and the noise distribution parameters. The important problems of detecting the number of sources and obtaining initial parameter estimates for the iterative EM algorithm are discussed in detail. The initialization procedure by itself is an effective algorithm for array processing in impulsive noise. Novel features of the EM algorithm and the associated maximum likelihood formulation include a nonlinear beamformer that separates multiple source signals in non-Gaussian noise and a robust covariance matrix estimate that suppresses impulsive noise while also performing a model-based interpolation to restore the low-rank signal subspace. The EM approach yields improvement over initial robust estimates and is valid for a wide SNR range. The results are also robust to PDF model mismatch and work well with infinite variance cases such as the symmetric stable distributions. Simulations confirm the optimality of the EM estimation procedure in a variety of cases, including a multiuser communications scenario. We also compare with existing array processing algorithms for non-Gaussian noise.},
+  file         = {:https\://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=887045:PDF},
+  keywords     = {Array signal processing, Gaussian noise, Additive noise, Iterative algorithms, Maximum likelihood detection, Maximum likelihood estimation, Noise robustness, Gaussian distribution, Wireless communication, Position measurement},
+  publisher    = {IEEE},
+  year         = {2000},
+}
+
+@Article{Kalyani2012,
+  author       = {Sheetal Kalyani},
+  date         = {December 2012},
+  journaltitle = {IEEE Transactions on Communications},
+  title        = {On CRB for Parameter Estimation in Two Component Gaussian Mixtures and the Impact of Misspecification},
+  doi          = {10.1109/TCOMM.2012.12.110539},
+  issn         = {1558-0857},
+  issue        = {12},
+  pages        = {3734--3744},
+  volume       = {60},
+  abstract     = {A closed form expression for the Cramer Rao lower bound (CRB) for parameter estimation in the presence of a two component Gaussian mixture noise model is derived. It is further shown that this closed form expression can be lower bounded by a simple two term expression. Closed form expressions are also derived for the variance of the maximum likelihood estimator (MLE) when the parameters of the Gaussian mixture model are misspecified. It is then shown that the MLE can handle a significant amount of misspecification of the parameters of the Gaussian mixture model and yet maintain a variance close to the CRB.},
+  file         = {:https\://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6389887:PDF},
+  keywords     = {Gaussian processes, Cramer-Rao bounds, Misspecified models, hypergeometric functions, Lerch transcendent, Gaussian mixtures},
+  publisher    = {IEEE},
+  year         = {2012},
+}
+
+@Article{Singh2016,
+  author    = {Singh, Parth Raj and Wang, Yide and Charg{\'e}, Pascal},
+  title     = {Bistatic MIMO radar for near field source localisation using PARAFAC},
+  number    = {12},
+  pages     = {1060--1061},
+  volume    = {52},
+  journal   = {Electronics Letters},
+  publisher = {IET},
+  year      = {2016},
+}
+
+@InProceedings{Singh2017,
+  author       = {Singh, Parth Raj and Wang, Yide and Charg{\'e}, Pascal},
+  booktitle    = {2017 25th European Signal Processing Conference (EUSIPCO)},
+  title        = {Near field targets localization using bistatic MIMO system with symmetric arrays},
+  organization = {IEEE},
+  pages        = {2403--2407},
+  year         = {2017},
+}
+
+@InProceedings{Singh2017a,
+  author       = {Singh, Parth Raj and Wang, Yide and Charg{\'e}, Pascal},
+  booktitle    = {2017 25th European Signal Processing Conference (EUSIPCO)},
+  title        = {Near field targets localization using bistatic MIMO system with spherical wavefront based model},
+  organization = {IEEE},
+  pages        = {2408--2412},
+  year         = {2017},
+}
+
+@Book{KayS.1993,
+  author    = {Kay S. M.},
+  date      = {1993},
+  title     = {Fundamentals of statistical signal processing: estimation theory},
+  language  = {english},
+  note      = {An optional note},
+  pages     = {575},
+  publisher = {Prentice-Hall},
+  volume    = {4},
+  address   = {The address},
+  month     = {7},
+  year      = {1993},
+}
+
+@Book{Cramer1993,
+  author    = {Cramer H.},
+  date      = {1999},
+  title     = {Mathematical Methods of Statistics (PMS-9)},
+  language  = {english},
+  note      = {An optional note},
+  pages     = {575},
+  publisher = {Princeton University Press},
+  volume    = {4},
+  address   = {The address},
+  month     = {7},
+  year      = {1993},
+}
+
+@Article{DDW93,
+  author   = {M. A. Doran and E. Doron and A. J. Weiss},
+  title    = {Coherent wide-band processing for arbitrary array geometry},
+  journal  = {IEEE Transactions on Signal Processing},
+  year     = {1993},
+  volume   = {41},
+  number   = {1},
+  pages    = {414-},
+  month    = jan,
+  issn     = {1053-587X},
+  doi      = {10.1109/TSP.1993.193167},
+  keywords = {Covariance matrix, Direction of arrival estimation, Eigenvalues and eigenfunctions, Geometry, Interpolation, Maximum likelihood estimation, Narrowband, Signal processing, Speech processing, Wideband},
+}
+
+@Article{HK90,
+  author   = {H. Hung and M. Kaveh},
+  title    = {Coherent wide-band {ESPRIT} method for directions-of-arrival estimation of multiple wide-band sources},
+  journal  = {IEEE Transactions on Acoustics, Speech and Signal Processing},
+  year     = {1990},
+  volume   = {38},
+  number   = {2},
+  pages    = {354--356},
+  month    = feb,
+  issn     = {0096-3518},
+  doi      = {10.1109/29.103072},
+  keywords = {parameter estimation, signal detection, signal processing, coherent signal-subspace method, coherent wideband ESPRIT, directions-of-arrival estimation, multiple wideband sources, Direction of arrival estimation, Discrete Fourier transforms, Frequency, Multiple signal classification, Narrowband, Noise generators, Sensor arrays, Signal generators, Statistics, Wideband},
+}
+
+@Article{OK90,
+  author   = {B. Ottersten and T. Kailath},
+  title    = {Direction-of-arrival estimation for wide-band signals using the {ESPRIT} algorithm},
+  journal  = {IEEE Transactions on Acoustics, Speech and Signal Processing},
+  year     = {1990},
+  volume   = {38},
+  number   = {2},
+  pages    = {317--327},
+  month    = feb,
+  issn     = {0096-3518},
+  doi      = {10.1109/29.103067},
+  keywords = {parameter estimation, signal detection, signal processing, ESPRIT algorithm, additive noise, array processing, computationally efficient algorithm, direction-of-arrival estimation, finite-dimensional linear system, impulse response, multidimensional linear system, poles, sensor array, translation invariance structure, white noise, wide-band signals, wideband emitter signals, Direction of arrival estimation, Linear systems, Multidimensional systems, Narrowband, Noise measurement, Sensor arrays, Sensor phenomena and characterization, Sensor systems, White noise, Wideband},
+}
+
+@Article{VB88,
+  author   = {B. D. {V}an Veen and K. M. Buckley},
+  title    = {Beamforming: a versatile approach to spatial filtering},
+  journal  = {IEEE ASSP Magazine},
+  year     = {1988},
+  volume   = {5},
+  number   = {2},
+  pages    = {4--24},
+  month    = apr,
+  issn     = {0740-7467},
+  doi      = {10.1109/53.665},
+  keywords = {filtering and prediction theory, reviews, signal processing, adaptive beamforming, beamformer implementations, data independent beamforming, notation, overview, partially adaptive beamforming, signal-processing, spatial filtering, statistically optimum beamforming, terminology, Apertures, Array signal processing, Feeds, Filtering, Frequency, Interference, Microwave filters, Sampling methods, Sensor arrays, Spatial filters},
+}
+
+@Article{WK85,
+  author   = {H. Wang and M. Kaveh},
+  title    = {Coherent signal-subspace processing for the detection and estimation of angles of arrival of multiple wide-band sources},
+  journal  = {IEEE Transactions on Acoustics, Speech and Signal Processing},
+  year     = {1985},
+  volume   = {33},
+  number   = {4},
+  pages    = {823--831},
+  month    = aug,
+  issn     = {0096-3518},
+  doi      = {10.1109/TASSP.1985.1164667},
+  keywords = {Direction of arrival estimation, Frequency domain analysis, Maximum likelihood detection, Maximum likelihood estimation, Narrowband, Position measurement, Propagation delay, Sensor arrays, Signal processing, Wideband},
+}
+
+@Article{KS90,
+  author   = {J. Krolik and D. Swingler},
+  title    = {Focused wide-band array processing by spatial resampling},
+  journal  = {IEEE Transactions on Acoustics, Speech and Signal Processing},
+  year     = {1990},
+  volume   = {38},
+  number   = {2},
+  pages    = {356--360},
+  month    = feb,
+  issn     = {0096-3518},
+  doi      = {10.1109/29.103073},
+  keywords = {signal processing, MUSIC spectral estimator, array processing, broadband sources, digital interpolation method, linear sensor array, rank-one representation, spatial frequency domain, spatial resampling, temporal frequency, wideband focusing, Array signal processing, Direction of arrival estimation, Least squares methods, Narrowband, Sensor arrays, Signal processing, Signal resolution, Signal to noise ratio, Speech processing, Wideband},
+}
+
+@Article{FW93,
+  author   = {B. Friedlander and A. J. Weiss},
+  title    = {Direction finding for wide-band signals using an interpolated array},
+  journal  = {IEEE Transactions on Signal Processing},
+  year     = {1993},
+  volume   = {41},
+  number   = {4},
+  pages    = {1618--1634},
+  month    = apr,
+  issn     = {1053-587X},
+  doi      = {10.1109/78.212735},
+  keywords = {array signal processing, eigenvalues and eigenfunctions, interpolation, matrix algebra, perturbation techniques, DOA estimation errors, array signal processing, asymptotic covariance matrix, coherent signals, composite covariance matrix, convergence matrices, correlated signals, direction-finding algorithm, eigendecomposition, interpolated array, multiple wideband signals, narrowband MUSIC algorithm, perturbation analysis, virtual arrays, Algorithm design and analysis, Convergence, Covariance matrix, Direction of arrival estimation, Frequency, Interpolation, Navigation, Performance analysis, Signal analysis, Wideband},
+}
+
+@InProceedings{CM89,
+  author    = {H. Clergeot and O. Michel},
+  title     = {New simple implementation of the coherent signal subspace method for wide band direction of arrival estimation},
+  booktitle = {Proc. Int. Conf. on Acoustics, Speech and Signal Processing (ICASSP)},
+  year      = {1989},
+  pages     = {2764--2767 vol.4},
+  month     = may,
+  doi       = {10.1109/ICASSP.1989.267041},
+  issn      = {1520-6149},
+  keywords  = {acoustic signal processing, interpolation, aerial acoustics, array processing, coherent signal subspace method, direction of arrival estimation, echos, high-resolution methods, indoor environment, interpolation, signal processing, source localization estimation, wideband emitters, Acoustic sensors, Cascading style sheets, Covariance matrix, Direction of arrival estimation, Frequency, Niobium, Signal processing, Signal resolution, Smoothing methods, Wideband},
+}
+
+@Article{KV96,
+  author   = {H. Krim and M. Viberg},
+  title    = {Two decades of array signal processing research: the parametric approach},
+  journal  = {IEEE Signal Processing Magazine},
+  year     = {1996},
+  volume   = {13},
+  number   = {4},
+  pages    = {67--94},
+  month    = jul,
+  issn     = {1053-5888},
+  doi      = {10.1109/79.526899},
+  keywords = {array signal processing, correlation methods, maximum likelihood estimation, signal sampling, spectral analysis, antenna sensors, array signal processing research, beamforming, closely spaced emitters, correlated signals, experimental data, geometric arguments, maximum likelihood principles, parameter estimation methods, parametric methods, sensor array signal processing, signal parameter estimation problem, signal parameters, spatial information, spectral based algorithmic solutions, suboptimal solutions, subspace based methods, temporal information, wavefield sampling, Antenna arrays, Array signal processing, Character generation, Maximum likelihood estimation, Parameter estimation, Sensor arrays, Sensor phenomena and characterization, Signal generators, Signal processing algorithms, Signal sampling},
+}
+
+@Article{AeroSK94,
+  author   = {S. Simanapalli and M. Kaveh},
+  title    = {Broadband focusing for partially adaptive beamforming},
+  journal  = {IEEE Transactions on Aerospace and Electronic Systems},
+  year     = {1994},
+  volume   = {30},
+  number   = {1},
+  pages    = {68--80},
+  month    = jan,
+  issn     = {0018-9251},
+  doi      = {10.1109/7.250407},
+  keywords = {array signal processing, fast Fourier transforms, focusing, interference suppression, minimisation, DFT, broadband adaptive beamforming, coherent signals, decorrelation, focusing preprocessor, minimum variance distortionless response, narrowband beamformer, optimality, partial adaptivity, signal cancellation, signal distortion, signal-subspace alignment, simulation, single frequency weights, Adaptive arrays, Analysis of variance, Array signal processing, Degradation, Distortion, Frequency domain analysis, Interference constraints, Narrowband, Robustness, Sensor arrays, Smoothing methods},
+}
+
+@Article{AeroCC93,
+  author   = {Y. H. Chen and R. H. Chen},
+  title    = {Directions-of-arrival estimations of multiple coherent broadband signals},
+  journal  = {IEEE Transactions on Aerospace and Electronic Systems},
+  year     = {1993},
+  volume   = {29},
+  number   = {3},
+  pages    = {1035--1043},
+  month    = jul,
+  issn     = {0018-9251},
+  doi      = {10.1109/7.220951},
+  keywords = {digital simulation, interpolation, least squares approximations, parameter estimation, signal detection, signal processing, arrival angles, coherent interpolation, coherent signal-subspace, directions-of-arrival, estimation errors, high-resolution narrowband signal-subspace approach, multiple coherent broadband signals, rotational invariance, signal parameters, spatial phase-shifting, total least squares estimation, translation invariant structure, unequal-signal powers, Cascading style sheets, Direction of arrival estimation, Electronic switching systems, Estimation error, Frequency estimation, Interpolation, Least squares approximation, Multiple signal classification, Narrowband, Sensor arrays, Signal processing},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
