@@ -1,0 +1,97 @@
+\chapter{Общая характеристика работы}
+
+\newcommand{\actuality}{\underline{\textbf{\actualityTXT}}}
+\newcommand{\progress}{\underline{\textbf{\progressTXT}}}
+\newcommand{\object}{\underline{{\textbf\objectTXT}}}
+\newcommand{\predmet}{\underline{{\textbf\predmetTXT}}}
+\newcommand{\aim}{\underline{{\textbf\aimTXT}}}
+\newcommand{\tasks}{\underline{\textbf{\tasksTXT}}}
+\newcommand{\novelty}{\underline{\textbf{\noveltyTXT}}}
+\newcommand{\influence}{\underline{\textbf{\influenceTXT}}}
+\newcommand{\methods}{\underline{\textbf{\methodsTXT}}}
+\newcommand{\defpositions}{\underline{\textbf{\defpositionsTXT}}}
+\newcommand{\reliability}{\underline{\textbf{\reliabilityTXT}}}
+\newcommand{\probation}{\underline{\textbf{\probationTXT}}}
+\newcommand{\contribution}{\underline{\textbf{\contributionTXT}}}
+\newcommand{\publications}{\underline{\textbf{\publicationsTXT}}}
+
+\input{common/characteristic} % Характеристика работы по структуре во введении и в автореферате не отличается (ГОСТ Р 7.0.11, пункты 5.3.1 и 9.2.1), потому её загружаем из одного и того же внешнего файла, предварительно задав форму выделения некоторым параметрам
+
+%Диссертационная работа была выполнена при поддержке грантов \dots
+
+%\underline{\textbf{Объем и структура работы.}} Диссертация состоит из~введения,
+%четырех глав, заключения и~приложения. Полный объем диссертации
+%\textbf{ХХХ}~страниц текста с~\textbf{ХХ}~рисунками и~5~таблицами. Список
+%литературы содержит \textbf{ХХX}~наименование.
+
+\chapter*{Введение}                         % Заголовок
+\addcontentsline{toc}{chapter}{Введение}    % Добавляем его в оглавление
+
+\include{Dissertation/part1}           % Глава 1
+
+\clearpage
+\chapter{Заключение}
+Основные результаты работы заключаются в следующем:
+\input{common/concl}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Публикации автора по теме диссертации}
+\ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=false}}{} % не рекомендуется применять пакет микротипографики к автоматически генерируемому списку литературы
+\urlstyle{rm}                               % ссылки URL обычным шрифтом
+\ifnumequal{\value{bibliosel}}{0}{% Встроенная реализация с загрузкой файла через движок bibtex8
+  \renewcommand{\bibname}{\large \bibtitleauthor}
+  \nocite{*}
+  \insertbiblioauthor           % Подключаем Bib-базы
+  %\insertbiblioexternal   % !!! bibtex не умеет работать с несколькими библиографиями !!!
+}{% Реализация пакетом biblatex через движок biber
+  % Цитирования.
+  %  * Порядок перечисления определяет порядок в библиографии (только внутри подраздела, если `\insertbiblioauthorgrouped`).
+  %  * Если не соблюдать порядок "как для \printbibliography", нумерация в `\insertbiblioauthor` будет кривой.
+  %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
+  %
+  %% authorvak
+  \nocite{vakbib1}%
+  \nocite{vakbib2}%
+  %
+  %% authorscopus
+  \nocite{Zhang2017}%
+  \nocite{Podkurkov2017}%
+  %
+  %% authorconf
+  \nocite{Zhang2016}%
+  \nocite{ptitt18}%
+  \nocite{Podkurkov2018}%
+  %% authorother
+  \nocite{otherbib1}%
+  %
+  \ifnumgreater{\value{usefootcite}}{0}{
+    \begin{refcontext}[labelprefix={}]
+      \ifnum \value{bibgrouped}>0
+        \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+      \else
+        \insertbiblioauthor      % Вывод всех работ автора
+      \fi
+    \end{refcontext}
+  }{
+  \ifnum \value{citeexternal}>0
+    \begin{refcontext}[labelprefix=A]
+      \ifnum \value{bibgrouped}>0
+        \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+      \else
+        \insertbiblioauthor      % Вывод всех работ автора
+      \fi
+    \end{refcontext}
+  \else
+    \ifnum \value{bibgrouped}>0
+      \insertbiblioauthorgrouped    % Вывод всех работ автора, сгруппированных по источникам
+    \else
+      \insertbiblioauthor      % Вывод всех работ автора
+    \fi
+  \fi
+  %  \insertbiblioauthorimportant  % Вывод наиболее значимых работ автора (определяется в файле characteristic во второй section)
+  \begin{refcontext}[labelprefix={}]    \insertbiblioexternal            % Вывод списка литературы, на которую ссылались в тексте автореферата
+  \end{refcontext}
+  }
+}
+\ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=true}}{}
+\urlstyle{tt}                               % возвращаем установки шрифта ссылок URL

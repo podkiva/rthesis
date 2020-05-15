@@ -1,0 +1,53 @@
+%&preformat-synopsis
+\RequirePackage[l2tabu,orthodox]{nag} % Раскомментировав, можно в логе получать рекомендации относительно правильного использования пакетов и предупреждения об устаревших и нерекомендуемых пакетах
+\PassOptionsToPackage{bookmarks=false}{hyperref}
+%\documentclass[a5paper,10pt,twoside,openany,article]{memoir} %,draft
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+
+\input{common/setup}        % общие настройки шаблона
+\input{common/packages}     % Пакеты общие для диссертации и автореферата
+\synopsistrue               % Этот документ --- автореферат
+\input{Report/reppackages}  % Пакеты для автореферата
+\input{Report/userpackages} % Пакеты для специфических пользовательских задач
+
+\input{common/newnames}     % Новые переменные, которые могут использоваться во всём проекте
+\input{Report/setup}        % Упрощённые настройки шаблона
+
+\input{common/data}         % Основные сведения
+\input{common/fonts}        % Определение шрифтов (частичное)
+\input{common/styles}       % Стили общие для диссертации и автореферата
+%\input{Report/disstyles}   % Стили для диссертации
+\input{Report/repstyles}    % Стили для автореферата
+\input{Report/userstyles}   % Стили для специфических пользовательских задач
+\input{userstyles}
+
+
+%%% Библиография. Выбор движка для реализации %%%
+\ifnumequal{\value{bibliosel}}{0}{%
+    \input{biblio/predefined} % Встроенная реализация с загрузкой файла через движок bibtex8
+}{
+    \input{biblio/biblatex}   % Реализация пакетом biblatex через движок biber
+}
+
+% Вывести информацию о выбранных опциях в лог сборки
+\typeout{Selected options:}
+\typeout{Draft mode: \arabic{draft}}
+\typeout{Font: \arabic{fontfamily}}
+\typeout{AltFont: \arabic{usealtfont}}
+\typeout{Bibliography backend: \arabic{bibliosel}}
+\typeout{Precompile images: \arabic{imgprecompile}}
+% Вывести информацию о версиях используемых библиотек в лог сборки
+\listfiles
+
+\begin{document}
+
+\input{Report/title}        % Титульный лист
+%\input{Report/contents}      % Таблица с Содержание автореферата
+\tableofcontents*
+\clearpage
+%\mainmatter                   % В том числе начинает нумерацию страниц арабскими цифрами с единицы
+%\mainmatter*                  % Нумерация страниц не изменится, но начнётся с новой страницы
+\input{Report/content}      % Содержание автореферата
+
+
+\end{document}

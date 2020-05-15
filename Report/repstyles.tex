@@ -1,0 +1,70 @@
+%%% Изображения %%%
+\graphicspath{{images/}{Synopsis/images/}}         % Пути к изображениям
+
+%%% Макет страницы %%%
+\geometry{a4paper, top=2cm, bottom=2cm, left=2.5cm, right=1cm, nofoot, nomarginpar} %, heightrounded, showframe
+\setlength{\topskip}{0pt}   %размер дополнительного верхнего поля
+
+%%% Интервалы %%%
+%% Реализация средствами класса (на основе setspace) ближе к типографской классике.
+%% И правит сразу и в таблицах (если со звёздочкой)
+%\DoubleSpacing*     % Двойной интервал
+\OnehalfSpacing*    % Полуторный интервал
+%\SingleSpacing      % Одинарный интервал
+%\setSpacing{1.42}   % Полуторный интервал, подобный Ворду (возможно, стоит включать вместе с предыдущей строкой)
+
+%%% Выравнивание и переносы %%%
+%% http://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness
+%% http://www.latex-community.org/forum/viewtopic.php?p=70342#p70342
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em % В случае проблем регулировать в первую очередь
+\hfuzz 0.3pt
+\vfuzz \hfuzz
+%\raggedbottom
+%\sloppy                 % Избавляемся от переполнений
+\clubpenalty=10000      % Запрещаем разрыв страницы после первой строки абзаца
+\widowpenalty=10000     % Запрещаем разрыв страницы после последней строки абзаца
+
+%%% Колонтитулы %%%
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+\makeevenfoot{plain}{}{\thepage}{}
+\makeoddfoot{plain}{}{\thepage}{}
+\pagestyle{plain}
+
+%%% Размеры заголовков %%%
+\setsecheadstyle{\normalfont\large\bfseries}
+\renewcommand*{\chaptitlefont}{\normalfont\large\bfseries}
+
+%%% Подписи %%%
+\setfloatadjustment{table}{%
+    \setlength{\abovecaptionskip}{0pt}   % Отбивка над подписью
+    \setlength{\belowcaptionskip}{0pt}   % Отбивка под подписью
+}
+
+%%% Отступы у плавающих блоков %%%
+\setlength\textfloatsep{1ex}
+
+\renewcommand{\cftchapterdotsep}{\cftdotsep}                % отбивка точками до номера страницы начала главы/раздела
+
+\makechapterstyle{thesisgost}{%
+	\chapterstyle{default}
+	\setlength{\beforechapskip}{0pt}
+	\setlength{\midchapskip}{0pt}
+	\setlength{\afterchapskip}{\theintvl\curtextsize}
+	\renewcommand*{\chapnamefont}{\basegostsectionfont}
+	\renewcommand*{\chapnumfont}{\basegostsectionfont}
+	\renewcommand*{\chaptitlefont}{\basegostsectionfont}
+	\renewcommand*{\chapterheadstart}{}
+	\ifnumgreater{\value{headingdelim}}{0}{%
+		\renewcommand*{\afterchapternum}{.\space}   % добавляет точку с пробелом после номера раздела
+	}{%
+		\renewcommand*{\afterchapternum}{\quad}     % добавляет \quad после номера раздела
+	}
+	\renewcommand*{\printchapternum}{\hdngaligni\hdngalign\chapnumfont \thechapter}
+	\renewcommand*{\printchaptername}{}
+	\renewcommand*{\printchapternonum}{\hdngaligni\hdngalign}
+}
+
+
