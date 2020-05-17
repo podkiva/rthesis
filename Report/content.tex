@@ -14,6 +14,7 @@
 \newcommand{\probation}{\underline{\textbf{\probationTXT}}}
 \newcommand{\contribution}{\underline{\textbf{\contributionTXT}}}
 \newcommand{\publications}{\underline{\textbf{\publicationsTXT}}}
+\newcommand{\passconf}{\underline{\textbf{\passconfTXT}}}
 
 \input{common/characteristic} % Характеристика работы по структуре во введении и в автореферате не отличается (ГОСТ Р 7.0.11, пункты 5.3.1 и 9.2.1), потому её загружаем из одного и того же внешнего файла, предварительно задав форму выделения некоторым параметрам
 
@@ -24,10 +25,10 @@
 %\textbf{ХХХ}~страниц текста с~\textbf{ХХ}~рисунками и~5~таблицами. Список
 %литературы содержит \textbf{ХХX}~наименование.
 
-\include{Report/introduction}    % Введение
-\include{Dissertation/part1}     % Глава 1
-\include{Dissertation/part2}     % Глава 2
-\include{Dissertation/part3}     % Глава 3
+% \include{Report/introduction}    % Введение
+% \include{Dissertation/part1}     % Глава 1
+% \include{Dissertation/part2}     % Глава 2
+% \include{Dissertation/part3}     % Глава 3
 
 \clearpage
 \chapter{Заключение}
@@ -50,19 +51,22 @@
   %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
   %
   %% authorvak
-  \nocite{vakbib1}%
-  \nocite{vakbib2}%
+  % \nocite{*}
+  % \nocite{vakbib1}%
+  % \nocite{vakbib2}%
   %
   %% authorscopus
   \nocite{Zhang2017}%
-  \nocite{Podkurkov2017}%
+  % \nocite{Podkurkov2017}%
   %
   %% authorconf
-  \nocite{Zhang2016}%
-  \nocite{ptitt18}%
-  \nocite{Podkurkov2018}%
+  % \nocite{Zhang2016}%
+  % \nocite{ptitt18}%
+  % \nocite{Podkurkov2018}%
+  %% authorwos
+  % \nocite{Podkurkov2019}%
   %% authorother
-  \nocite{otherbib1}%
+  % \nocite{otherbib1}%
   %
   \ifnumgreater{\value{usefootcite}}{0}{
     \begin{refcontext}[labelprefix={}]
