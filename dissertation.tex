@@ -8,6 +8,7 @@
 \synopsisfalse                      % Этот документ --- не автореферат
 \input{Dissertation/dispackages}    % Пакеты для диссертации
 \input{Dissertation/userpackages}   % Пакеты для специфических пользовательских задач
+\input{userpackages}            % Пакеты для специфических пользовательских задач
 \input{userstyles}
 
 \input{Dissertation/setup}      % Упрощённые настройки шаблона
@@ -56,22 +57,22 @@
 
 %%% Структура диссертации (ГОСТ Р 7.0.11-2011, 4)
 %\include{Dissertation/title}           % Титульный лист
-\include{Dissertation/contents}        % Оглавление
+\input{Dissertation/contents}        % Оглавление
 \ifnumequal{\value{contnumfig}}{1}{}{\counterwithout{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{}{\counterwithout{table}{chapter}}
-\include{Dissertation/introduction}    % Введение
+\input{Dissertation/introduction}    % Введение
 \ifnumequal{\value{contnumfig}}{1}{\counterwithout{figure}{chapter}
 }{\counterwithin{figure}{chapter}}
 \ifnumequal{\value{contnumtab}}{1}{\counterwithout{table}{chapter}
 }{\counterwithin{table}{chapter}}
-\include{Dissertation/part1}           % Глава 1
-\include{Dissertation/part2}           % Глава 2
-\include{Dissertation/part3}           % Глава 3
+\input{Dissertation/part1}           % Глава 1
+\input{Dissertation/part2}           % Глава 2
+\input{Dissertation/part3}           % Глава 3
 
 %\include{Dissertation/conclusion}      % Заключение
 %\include{Dissertation/acronyms}        % Список сокращений и условных обозначений
 %\include{Dissertation/dictionary}      % Словарь терминов
-\include{Dissertation/references}      % Список литературы
+\input{Dissertation/references}      % Список литературы
 %\include{Dissertation/lists}           % Списки таблиц и изображений (иллюстративный материал)
 
 %%% Настройки для приложений

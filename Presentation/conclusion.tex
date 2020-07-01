@@ -1,4 +1,17 @@
 \begin{frame}
+	\frametitle{Заключение}
+	\begin{itemize}
+		\item Предложенный метод предварительной обработки многомерных сигналов в широкополосных системах позволяет применять алгоритмы оценивания параметров каналов связи, разработанные для узкополосных систем.
+		\item Разработан новый алгоритм оценивания параметров канала связи с отражателями в ближнем геометрическом поле с использованием сферической модели фронта волны.
+		\item Исследована граница Крамера-Рао для задач оценки параметров каналов связи с негауссовым распределением аддитивной помехи, заданным смесью нормальных распределений с ненулевыми средними значениями компонент.
+	\end{itemize}
+\end{frame}
+\note{
+	Проговариваются основные заключения
+}
+
+\begin{comment}
+\begin{frame}
     \frametitle{Научная новизна}
     \begin{itemize}
         \item Впервые реализован \dots
@@ -48,36 +61,38 @@
 \note{
     Получен акт о внедрении.
 }
+\end{comment}
 
-% \begin{frame} % публикации на одной странице
 \begin{frame}[t,allowframebreaks] % публикации на нескольких страницах
-    \frametitle{Основные публикации}
-    \nocite{vakbib1}%
-    \nocite{vakbib2}%
-    %
-    %% authorwos
-    \nocite{wosbib1}%
-    %
-    %% authorscopus
-    \nocite{scbib1}%
-    %
-    %% authorconf
-    \nocite{confbib1}%
-    \nocite{confbib2}%
-    %
-    %% authorother
-    \nocite{bib1}%
-    \nocite{bib2}%
-    \ifnumequal{\value{bibliosel}}{0}{
-        \insertbiblioauthor
-    }{
-        \printbibliography%
-    }
+	\frametitle{Список литературы}	
+	
+	%% authorvak
+	\nocite{vakbib1}%
+	\nocite{vakbib2}%
+	%
+	%% authorwos
+	%
+	%% authorscopus
+	\nocite{Zhang2017}%
+	\nocite{Podkurkov2017}%
+	\nocite{Podkurkov2019}
+	%
+	%% authorconf
+	\nocite{Podkurkov2018}%
+	%% authorother
+	\nocite{otherbib1}%
+	
+	\ifnumequal{\value{bibliosel}}{0}{
+		\insertbiblioexternal%
+	}{	
+		\printbibliography%
+	}
 \end{frame}
 \note{
-    Результаты работы опубликованы в N печатных изданиях, в т.ч. M реферируемых изданиях.
+	Список литературы цитируемой в тексте презентации
 }
 
+\begin{comment}
 \begin{frame}
     \frametitle{Участие в конференциях}
     \begin{itemize}
@@ -92,6 +107,7 @@
 \note{
     Работа была представлена на ряде конференций.
 }
+\end{comment}
 
 \begin{frame}[plain, noframenumbering] % последний слайд без оформления
     \begin{center}
